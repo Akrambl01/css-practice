@@ -1,0 +1,167 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: #121321;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    perspective: 300px;
+
+}
+
+main::after {
+    content: '';
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(-150px, -100px);
+    background: linear-gradient(90deg, #c10e0e, #f3f5f9);
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(150px, 100px);
+    background: linear-gradient(90deg, #c10e0e, #f3f5f9);
+}
+
+.container {
+    position: relative;
+    z-index: 100;
+    width: 375px;
+    height: 225px;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.container:hover {
+    transform: rotateY(180deg);
+}
+
+.font-face header,
+.font-face .logo {
+    display: flex;
+    align-items: center;
+}
+
+.font-face header {
+    justify-content: space-between;
+}
+
+.container .card {
+    position: absolute;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* i used this to hide the back face when rotate */
+    backface-visibility: hidden;
+}
+
+.font-face .cart {
+    width: 48px;
+    height: 30px;
+}
+
+h5.mc {
+    margin: 6px 9px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.font-face .chip {
+    width: 60px;
+}
+
+.logo {
+    padding: 25px 13px;
+}
+
+.font-face .card-details {
+    display: flex;
+    align-self: center;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+h6 {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+h5.number {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+h5.name {
+    margin-top: 20px;
+}
+
+.card.back-face {
+    border: none;
+    padding: 15px 25px 25px 25px;
+    transform: rotateY(180deg);
+}
+
+.card.back-face h6 {
+    font-size: 8px;
+}
+
+.card.back-face .black {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    background: #000;
+}
+
+.card.back-face .signature {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 80px;
+    height: 40px;
+    width: 85%;
+    border-radius: 6px;
+    background: repeating-linear-gradient(#fff, #fff 3px, #efefef 0px, #efefef 9px);
+}
+
+.signature i {
+    color: #000;
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 4px 6px;
+    background-color: #fff;
+    margin-right: -30px;
+    z-index: -1;
+}
+
+.card.back-face h5 {
+    font-size: 8px;
+    margin-top: 15px;
+}
+
+

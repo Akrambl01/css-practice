@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    /* display: grid; */
+    /* place-content: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E2E9F9;
+}
+
+main{
+    background-color: #ffff;
+    padding: 40px 20px;
+    width: 47rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 8px;
+    box-shadow: 1px 5px 25px 3px #87a0ce5f;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+nav .menu{
+    display: flex;
+    justify-content: space-between;
+    height: 36px;
+    position: relative;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    gap: 14px;
+    font-size: small;
+    font-weight: bold;
+    color: #373C47;
+    align-items: center;
+    padding-right: 20px;
+}
+
+li{
+    cursor: pointer;
+}
+
+input{
+    flex-grow: 0.3;
+    border: 0.2px solid #87A0CE;
+    border-radius: 2px;
+}
+
+.menu i{
+    position: absolute;
+    z-index: 12;
+    top: 10px;
+    left: 10px;
+}
+
+input::placeholder{
+    padding-left: 33px;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card img{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+.card{
+    cursor: pointer;
+    padding: 15px 30px 30px 15px;
+    background-color: #e8edfa53;
+    display: flex;
+    gap: 14px;
+    border-radius: 9px;
+
+    flex-basis: 32%;
+    height: 100%;
+}
+
+section label{
+    flex-basis: 32%;
+}
+.card h3{
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+span > p{
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.links{
+    margin-top: 10px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.links p{
+    border: 1px solid #87A0CE;
+    border-radius: 12px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2363e4;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+#check1:checked ~ #check1 li{
+    background-color: #1d52ff85;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+#check2:checked ~ #check2 li{
+    background-color: #1d52ff85;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+#check3:checked ~ #check3 li{
+    background-color: #1d52ff85;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+#check4:checked ~ #check4 li{
+    background-color: #1d52ff85;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+#check5:checked ~ #check5 li{
+    background-color: #1d52ff85;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+#click1:checked ~ #click1 .card,
+#click2:checked ~ #click2 .card,
+#click3:checked ~ #click3 .card,
+#click4:checked ~ #click4 .card,
+#click5:checked ~ #click5 .card,
+#click6:checked ~ #click6 .card
+{
+    border: 1px solid #87a0ceab;
+    box-shadow: 1px 7px 20px #87a0ce69;
+}

@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #1a2036;
+    font-family: sans-serif;
+    display: flex;
+    color: #ffffffad;
+}
+
+main {
+    margin: auto;
+    background-color: #242b42;
+    height: min-content;
+    width: 58rem;
+    border-radius: 1.3rem;
+    padding: 2.3rem;
+    display: flex;
+    gap: 3rem;
+}
+
+nav {
+    background: #1a2036;
+    width: min-content;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav i {
+    padding: 1.3rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-name h3 {
+    display: inline-block;
+    margin-left: .8rem;
+
+}
+
+.radio-group {
+    display: flex;
+    width: 5rem;
+    height: 2rem;
+    margin-right: 20px;
+}
+
+.radio {
+    width: 50%;
+    outline: 1px solid rgb(22, 22, 22);
+}
+
+label {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.radio i {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #18203a;
+}
+
+.group-card {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    position: relative;
+    width: 10rem;
+    height: 13.5rem;
+    padding: 1rem;
+    background-color: #2e3650;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    border-radius: .8rem;
+
+    &.card i {
+        padding: 1.2rem;
+        border-radius: 50%;
+        background-color: #242b42;
+    }
+
+    &.card img {
+        width: 50%;
+        border-radius: 50%;
+    }
+
+}
+
+.card:not(:first-child) {
+    background-color: #1a2036;
+    gap: .6rem;
+}
+
+.notif::after {
+    content: '';
+    position: absolute;
+    background-color: #8e66ff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 1rem;
+    right: 1rem;
+}

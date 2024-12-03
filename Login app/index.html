@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <section class="container">
+        <main class="loginForm">
+            <h2>Login</h2>
+            <form onsubmit="return false">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Enter your email">
+                <span></span>
+                <label for="pwd">Password</label>
+                <input type="password" name="pwd" id="pwd" placeholder="Enter your password">
+                <span></span>
+                <button id="loginBtn" >login</button>
+            </form>
+            <p class="signUpTxt">Dont have an account? <span onclick="login()">Sign up</span></p>
+        </main>
+        <main class="signUpForm">
+            <h2>Sign Up</h2>
+            <form onsubmit="return false">
+                <div class="fullName">
+                    <div class="firstName">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="lastName">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                    </div>
+                </div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Enter your email">
+                <span></span>
+                <label for="pwd">Password</label>
+                <input type="text" name="pwd" id="pwd" placeholder="Enter your password">
+                <span></span>
+                <button id="loginBtn" >Creat New Account</button>
+            </form>
+            <p class="or">Or Sign Up with</p>
+            <div class="orLogin">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <p class="signUpTxt" onclick="singUp()">Already have an account? <span>Sign in</span></p>
+        </main>
+    </section>
+
+    <script>
+        let container = document.querySelector('.container')
+        function login() {
+            container.classList.add('flip')
+            document.title = 'Sign up page'
+        }
+        function singUp(){
+            container.classList.remove('flip')
+            document.title = 'Login page'
+        }
+    </script>
+</body>
+</html>
